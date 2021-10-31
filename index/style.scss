@@ -1,0 +1,22 @@
+$btn-primary: black;
+$btn-secondary: white;
+
+@for $i from 1 through 5 {
+  button:nth-child(#{$i}) {
+    background-color: lighten($btn-primary, $i * 5%);
+    color: darken($btn-secondary, $i * 5%);
+    width: 200px;
+    height: 100px;
+    border-radius: $i * 5px;
+    font-size: 20px;
+    margin-top: 22%;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
